@@ -1,0 +1,14 @@
+# .NET build and test output
+[Bb]in/
+[Oo]bj/
+TestResults/
+BenchmarkDotNet.Artifacts/
+
+# Local IDE settings
+.idea/
+.vs/
+*.user
+*.suo
+
+# macOS
+.DS_Store
