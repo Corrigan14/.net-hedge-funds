@@ -4,9 +4,13 @@ namespace Examples;
 
 public class ExampleOne
 {
-    public bool TryGetValue(ReadOnlySpan<byte> fixMessage, int tag, out ReadOnlySpan<byte> value)
+    public bool TryGetValue(
+        ReadOnlySpan<byte> fixMessage,
+        int tag,
+        out ReadOnlySpan<byte> value
+    )
     {
-        ReadOnlySpan<byte> remaining = fixMessage;
+        var remaining = fixMessage;
         value = default;
         while (!remaining.IsEmpty)
         {
@@ -22,11 +26,12 @@ public class ExampleOne
 
             var tagBytes = field.Slice(0, startIndex);
 
-            bool parsed = Utf8Parser.TryParse(tagBytes, out int parsedTag, out int bytesConsumed);
-            bool matches = parsed && bytesConsumed == tagBytes.Length && parsedTag == tag;
+            var parsed = Utf8Parser.TryParse(tagBytes, out int parsedTag, out var bytesConsumed);
+            var matches = parsed && bytesConsumed == tagBytes.Length && parsedTag == tag;
+
             if (matches)
             {
-                value = field.Slice(startIndex + 1, pipeIndex);
+                value = field.Slice(startIndex + 1, field.Length - (startIndex + 1));
 
                 return true;
             }
