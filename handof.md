@@ -27,9 +27,20 @@ We are on Kata 1: a zero-allocation FIX field parser.
   versus methods and other beginner syntax as it arises.
 - Keep feedback direct, patient, and evidence-based. Light dry engineering humor
   is welcome; do not mistake passing tests for proof of universal correctness.
-- Update this handoff after meaningful progress when requested, keeping completed
-  work, planned work, and unresolved decisions distinct. Do not mark work done
-  merely because it was suggested in chat.
+- We switch back and forth between computers and chats. Treat this file as the
+  shared learning checkpoint: read it at the start of each new chat and always
+  keep it current after meaningful progress, decisions, measurements, or plan
+  changes, without waiting for a separate request. Updating this file is authorized;
+  that does not authorize edits to my implementation or tests.
+- Before ending a working session or handing over to another computer, record the
+  exact next step, any unfinished work, and checks actually run. Keep completed
+  work, planned work, learner-reported results, and tutor-verified results distinct.
+  Do not mark work done merely because it was suggested in chat.
+- Before continuing on either computer, pull the latest committed changes and
+  inspect the local working tree. If local changes prevent a clean update, preserve
+  them and resolve the discrepancy rather than overwriting work. Commit and push
+  the updated checkpoint with the relevant work when authorized; never assume an
+  uncommitted or unpushed update is available on the other computer.
 
 ## Repository and commands
 
